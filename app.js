@@ -11,6 +11,7 @@ var mongoose = require('mongoose');
 var db = require('./routes/db');
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var employees = require('./routes/employees');
 var app = express();
 
 // view engine setup
@@ -27,7 +28,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
-app.use('/', db);
+app.use('/employees', employees);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

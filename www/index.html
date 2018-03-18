@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee List</title>
+	<link rel='stylesheet' href='/public/stylesheets/main.css' />
+</head>
+<body>
+	<div class="container">
+		<h3><a href="create.html">Create Employee</a></h3>
+		<h1>Employee List</h1>
+		<% if(employees.length>0) { %>
+		<table>
+			<thead>
+				<tr>
+					<th>Employee Name</th>
+					<th>Position</th>
+				</tr>
+			</thead>
+		</table>
+		<% } else { %>
+		<div>No employees found.</div>
+		<% } %>
+	</div>
+</body>
+</html>
