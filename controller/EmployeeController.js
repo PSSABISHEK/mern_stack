@@ -8,7 +8,7 @@ var employeeController = {};
 /* create employee function */
 
 employeeController.create = function (req, res) {
-    res.render("../www/create");
+    res.sendfile("../www/create.html");
 };
 
 /* save new employee function */
@@ -19,7 +19,7 @@ employeeController.save = function (req, res) {
     employee.save(function (err) {
         if (err) {
             console.log(err);
-            res.render("../www/create");
+            res.sendfile("../www/create.html");
         } else {
             console.log("Successfully created an employee.");
             console.log(req.body);
